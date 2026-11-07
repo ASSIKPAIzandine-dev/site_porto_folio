@@ -4,25 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ASSIKPA Izandine | Développeur d'Applications</title>
-  <meta name="description" content="Portfolio de ASSIKPA Izandine - Développeur d'applications en Licence 3 à l'IFNTI" />
+  <meta name="description" content="Portfolio de ASSIKPA Izandine - Développeur d'applications en Licence 3 à l'IFNTI (Togo)" />
+  <meta name="author" content="ASSIKPA Izandine" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="container nav-container">
       <a href="#accueil" class="logo">Izandine<span>.</span></a>
       <nav class="nav" id="nav">
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#formation">Formation</a>
-        <a href="#contact">Contact</a>
-        <a href="images/izandine.pdf" download="izandine.cv"  >Télécharger le cv</a>
-
+        <a href="#accueil" class="nav-link">Accueil</a>
+        <a href="#apropos" class="nav-link">À propos</a>
+        <a href="#competences" class="nav-link">Compétences</a>
+        <a href="#projets" class="nav-link">Projets</a>
+        <a href="#formation" class="nav-link">Formation</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="images/izandine.pdf" class="nav-cv" download="CV_ASSIKPA_Izandine.pdf">
+          <i class="fas fa-download"></i> CV
+        </a>
       </nav>
       <button class="menu-btn" id="menuBtn" aria-label="Menu">
         <span></span>
@@ -34,19 +37,40 @@
 
   <main>
     <section id="accueil" class="hero">
+      <div class="hero-bg"></div>
       <div class="container hero-content">
-        <p class="hero-greeting">Bonjour, je suis</p>
-        <h1>ASSIKPA Izandine</h1>
-        <h2>Développeur d'Applications</h2>
-        <p class="hero-desc">
+        <p class="hero-greeting fade-in">Bonjour, je suis</p>
+        <h1 class="fade-in delay-1">ASSIKPA <span>Izandine</span></h1>
+        <h2 class="hero-role fade-in delay-2">
+          <span class="typed-text">Développeur d'Applications</span>
+        </h2>
+        <p class="hero-desc fade-in delay-3">
           Étudiant en Licence 3 à l'IFNTI, passionné par la création d'applications web et mobiles modernes, 
           performantes et centrées sur l'utilisateur.
         </p>
-        <div class="hero-buttons">
-          <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-          <a href="#contact" class="btn btn-outline">Me contacter</a>
+        <div class="hero-buttons fade-in delay-4">
+          <a href="#projets" class="btn btn-primary">
+            <i class="fas fa-code"></i> Voir mes projets
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Me contacter
+          </a>
+        </div>
+        <div class="hero-social fade-in delay-5">
+          <a href="https://github.com/ASSIKPAIzandine-dev" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:assikpaizandine@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/22893786260" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
       </div>
+      <a href="#apropos" class="scroll-down" aria-label="Scroll">
+        <i class="fas fa-chevron-down"></i>
+      </a>
     </section>
 
     <section id="apropos" class="section">
@@ -54,13 +78,11 @@
         <h2 class="section-title">À propos de moi</h2>
         <div class="about-grid">
           <div class="about-photo">
-            <img src="images/iza.jpeg" alt="ASSIKPA Izandine" class="profile-img" width="200" height="200" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="photo-placeholder">
-              <span>📷</span>
+            <div class="photo-frame">
+              <img src="images/iza.jpeg" alt="ASSIKPA Izandine" class="profile-img" />
             </div>
           </div>
-
-          <div class="about-text">
+          <div class="about-content">
             <p>
               Je m'appelle <strong>ASSIKPA Izandine</strong>, étudiant en <strong>Licence 3</strong> 
               à l'<strong>IFNTI</strong> (Institut de Formation aux Nouvelles Technologies de l'Information).
@@ -73,17 +95,36 @@
               Mon objectif est de devenir un développeur polyvalent capable de concevoir des applications 
               web et mobiles de qualité professionnelle.
             </p>
-          </div>
-
-          <div class="about-card">
-            <h3>Infos rapides</h3>
-            <ul>
-              <li><span>Nom</span> ASSIKPA Izandine</li>
-              <li><span>Statut</span> Étudiant L3</li>
-              <li><span>École</span> IFNTI</li>
-              <li><span>Spécialité</span> Développement d'applications</li>
-              <li><span>Localisation</span> Togo</li>
-            </ul>
+            <div class="about-info">
+              <div class="info-item">
+                <i class="fas fa-user-graduate"></i>
+                <div>
+                  <span>Statut</span>
+                  <strong>Étudiant L3</strong>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-university"></i>
+                <div>
+                  <span>École</span>
+                  <strong>IFNTI</strong>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <span>Localisation</span>
+                  <strong>Togo</strong>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-laptop-code"></i>
+                <div>
+                  <span>Spécialité</span>
+                  <strong>Développement d'applications</strong>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -95,42 +136,54 @@
         <p class="section-subtitle">Technologies et outils que j'utilise ou que j'apprends actuellement</p>
         <div class="skills-grid">
           <div class="skill-card">
-            <div class="skill-icon">🌐</div>
+            <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
             <h3>Frontend</h3>
-            <ul>
-              <li>HTML5 / CSS3</li>
-              <li>JavaScript</li>
-              <li>Responsive Design</li>
-            </ul>
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React.js</span>
+              <span>Responsive Design</span>
+              <span>Tailwind CSS</span>
+            </div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">⚙️</div>
+            <div class="skill-icon"><i class="fas fa-server"></i></div>
             <h3>Backend</h3>
-            <ul>
-              <li>PHP/Laravel</li>
-              <li>Node.js (en cours)</li>
-              <li>Python</li>
-              <li>Java</li>
-              <li>langage c</li>
-              <li>Bases de données (POSTGRESQL/SQLITE)</li>
-            </ul>
+            <div class="skill-tags">
+              <span>PHP / Laravel</span>
+              <span>Node.js</span>
+              <span>Python</span>
+              <span>Django</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>C</span>
+            </div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">📱</div>
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>Bases de données</h3>
+            <div class="skill-tags">
+              <span>PostgreSQL</span>
+              <span>SQLite</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
             <h3>Mobile</h3>
-            <ul>
-              <li>Flutter (en cours)</li>
-              <li>React Native (en cours)</li>
-            </ul>
+            <div class="skill-tags">
+              <span>Flutter</span>
+            </div>
           </div>
           <div class="skill-card">
-            <div class="skill-icon">🛠️</div>
+            <div class="skill-icon"><i class="fas fa-tools"></i></div>
             <h3>Outils</h3>
-            <ul>
-              <li>Git & GitHub</li>
-              <li>VS Code</li>
-              <li>Figma </li>
-            </ul>
+            <div class="skill-tags">
+              <span>Git & GitHub</span>
+              <span>VS Code</span>
+              <span>Figma</span>
+            </div>
           </div>
         </div>
       </div>
@@ -139,148 +192,149 @@
     <section id="projets" class="section">
       <div class="container">
         <h2 class="section-title">Projets</h2>
-        <p class="section-subtitle">Quelques réalisations – clique sur les liens GitHub pour voir le code</p>
+        <p class="section-subtitle">Quelques réalisations – clique sur les liens pour voir le code</p>
         <div class="projects-grid">
 
           <article class="project-card">
             <div class="project-img">
-              <img src="images/mastermind.png" alt="Application de Gestion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder"></div>
+              <img src="images/mastermind.png" alt="Mastermind" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/ASSIKPAIzandine-dev/jeux_mastermind.git" target="_blank" rel="noopener" class="overlay-btn">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
             </div>
             <div class="project-content">
-              <h3>jeux</h3>
-              <p> Le projet Mastermind en Python est un jeu de logique où un joueur doit deviner une combinaison secrète de couleurs ou de chiffres générée aléatoirement par l'ordinateur en un nombre limité de tentatives, en s'aidant d'indices de position et de présence réalisé avec Python/tkinter</p>
+              <h3>Mastermind</h3>
+              <p>Jeu de logique où le joueur doit deviner une combinaison secrète. Indices de position et de présence. Réalisé avec Python et Tkinter.</p>
               <div class="project-tags">
-                <span>Python/tkinter</span>
+                <span>Python</span>
+                <span>Tkinter</span>
               </div>
-              <a href="https://github.com/ASSIKPAIzandine-dev/jeux_mastermind.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-img">
-              <img src="images/projet1.jpg" alt="Application de Gestion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder">💻</div>
-            </div>
-            <div class="project-content">
-              <h3>Gestion de stock</h3>
-              <p> une application de bureau robuste conçue pour centraliser et automatiser les opérations quotidiennes d'un commerce. Développé en <strong>Python</strong>, ce système interagit de manière performante et sécurisée avec une base de données relationnelle <strong>PostgreSQL</strong> grâce au pilote natif <strong>psycopg2</strong>. </p>
-              <div class="project-tags">
-                <span>Python/psycopg2</span>
-              </div>
-              <a href="https://github.com/ASSIKPAIzandine-dev/gestion_boutique_vetement.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
             </div>
           </article>
 
-            <article class="project-card">
+          <article class="project-card">
             <div class="project-img">
-              <img src="images/suivi.png" alt="Application de Gestion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder"></div>
+              <img src="images/ss.png" alt="Gestion de stock boutique" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/ASSIKPAIzandine-dev/gestion_boutique_vetement.git" target="_blank" rel="noopener" class="overlay-btn">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Application de suivi </h3>
-              <p>une  application web  permettant de suivre des apprenants(learner-tracking) durant leurs cursus academique et leurs offrants des soutients et les orientants  Réalisée avec PHP/Laravel, JavaScript ,Tailwind CSS</p>
+              <h3>Gestion de stock (Boutique)</h3>
+              <p>Application de bureau robuste pour centraliser et automatiser les opérations d'un commerce. Python + PostgreSQL via psycopg2.</p>
               <div class="project-tags">
-                <span>PHP/Laravel</span>
+                <span>Python</span>
+                <span>PostgreSQL</span>
+                <span>psycopg2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img">
+              <img src="images/suivi.png" alt="Application de suivi" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/ifnti-dev/learner-tracking.git" target="_blank" rel="noopener" class="overlay-btn">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Learner Tracking</h3>
+              <p>Application web de suivi des apprenants durant leur cursus académique, avec soutiens et orientation. PHP/Laravel + JavaScript + Tailwind CSS.</p>
+              <div class="project-tags">
+                <span>Laravel</span>
                 <span>JavaScript</span>
-                 <span> Tailwind CSS </span>
-
-               
+                <span>Tailwind</span>
               </div>
-              <a href="https://github.com/ifnti-dev/learner-tracking.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-img">
-              <img src="images/stock.png" alt="Application de Gestion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder">📱</div>
+              <img src="images/stock.png" alt="Gestion de stock web" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/ASSIKPAIzandine-dev/Gestion_de_-stock.git" target="_blank" rel="noopener" class="overlay-btn">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
             </div>
             <div class="project-content">
-              <h3>Application de Gestion</h3>
-              <p>Développement d'une application web de gestion de stock (HTML5, CSS3, PHP) avec suivi des produits et mise à jour des inventaires en temps réel. ».</p>
+              <h3>Gestion de stock (Web)</h3>
+              <p>Application web de gestion de stock avec suivi des produits et mise à jour des inventaires. HTML5, CSS3 et PHP.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>PHP</span>
               </div>
-              <a href="https://github.com/ASSIKPAIzandine-dev/Gestion_de_-stock.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
-            </div>
-          </article>
-           <article class="project-card">
-            <div class="project-img">
-              <img src="images/etudiant.jpg" alt="Application de Gestion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder">💻</div>
-            </div>
-            <div class="project-content">
-              <h3>système de Gestion</h3>
-              <p>Développement d'une application de gestion d'étudiants en Java, utilisant l'architecture Swing pour la conception de l'interface graphique (GUI).</p>
-              <div class="project-tags">
-                <span>JAVA</span>
-              </div>
-              <a href="https://github.com/ASSIKPAIzandine-dev/gestion_etudiant.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
             </div>
           </article>
 
+          <!-- Gestion étudiants -->
           <article class="project-card">
             <div class="project-img">
-              <img src="images/ecommerce.png" alt="Dashboard Étudiant" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder">💻</div>
-            </div>
-            <div class="project-content">
-              <h3>Ecommerce(En cours)</h3>
-              <p>Développement d'une application e-commerce moderne avec le framework PHP Laravel, JavaScript et Tailwind CSS, incluant la gestion du panier et le paiement sécurisé.  </p>
-              <div class="project-tags">
-                <span>PHP/laravel</span>
-                 <span>JavaScript</span>
-                 <span>Tailwind css</span>
+              <img src="images/etudiant.jpg" alt="Gestion étudiants" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/ASSIKPAIzandine-dev/gestion_etudiant.git" target="_blank" rel="noopener" class="overlay-btn">
+                  <i class="fab fa-github"></i> Code
+                </a>
               </div>
             </div>
-               <a href="https://github.com/ASSIKPAIzandine-dev/e-commerce.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
-          </article>
-          <article class="project-card">
-            <div class="project-img">
-              <img src="images/game.png" alt="Dashboard Étudiant" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder">💻</div>
-            </div>
             <div class="project-content">
-              <h3>Développement d’un jeu vidéo 2D</h3>
-              <p>Développement d’un jeu vidéo 2D en Python (Pygame) basé sur des mécaniques de collision et de course-poursuite entre un chat et des souris</p>
-              <div class="project-tags">
-                <span>Python/Pygame</span>
-              </div>
-            </div>
-               <a href="https://github.com/ASSIKPAIzandine-dev/jeux_video.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
-          </article>
-          <article class="project-card">
-            <div class="project-img">
-              <img src="images/projet3.jpg" alt="Dashboard Étudiant" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="img-placeholder">💻</div>
-            </div>
-            <div class="project-content">
-              <h3>système de gestion transport urbain</h3>
-              <p>Développement d’une application de gestion urbaine et de transport en Java. Conception de modules d'optimisation des trajets, de suivi de la flotte de véhicules et de supervision des infrastructures de mobilitéa</p>
+              <h3>Gestion d'étudiants</h3>
+              <p>Application de gestion d'étudiants en Java avec interface graphique Swing (architecture GUI).</p>
               <div class="project-tags">
                 <span>Java</span>
+                <span>Swing</span>
               </div>
             </div>
-               <a href="https://github.com/ASSIKPAIzandine-dev/systeme_gestion_transport_urbain.git" class="project-link" target="_blank" rel="noopener">
-                Voir sur GitHub →
-              </a>
           </article>
+
+          <!-- E-commerce -->
+          <article class="project-card">
+            <div class="project-img">
+              <img src="images/ecommerce.png" alt="E-commerce" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/ASSIKPAIzandine-dev/e-commerce.git" target="_blank" rel="noopener" class="overlay-btn">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>E-commerce <span class="badge">En cours</span></h3>
+              <p>Application e-commerce moderne avec panier et paiement sécurisé. Laravel, JavaScript et Tailwind CSS.</p>
+              <div class="project-tags">
+                <span>Laravel</span>
+                <span>JavaScript</span>
+                <span>Tailwind</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Jeu 2D -->
+          <article class="project-card">
+            <div class="project-img">
+              <img src="images/game.png" alt="Jeu vidéo 2D" loading="lazy" />
+              <div class="project-overlay">
+                <a href="https://github.com/ASSIKPAIzandine-dev/jeux_video.git" target="_blank" rel="noopener" class="overlay-btn">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Jeu vidéo 2D</h3>
+              <p>Jeu 2D en Python (Pygame) basé sur des mécaniques de collision et de course-poursuite entre un chat et des souris.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Pygame</span>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -293,18 +347,18 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
+              <span class="timeline-date">En cours</span>
               <h3>Licence 3 – Développement d'Applications</h3>
-              <p class="timeline-place">IFNTI</p>
-              <p class="timeline-date">En cours</p>
+              <p class="timeline-place"><i class="fas fa-university"></i> IFNTI</p>
               <p>Formation axée sur le développement d'applications web et mobiles, les bases de données et les bonnes pratiques de programmation.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
+              <span class="timeline-date">2023 – 2025</span>
               <h3>Licence 1 & 2</h3>
-              <p class="timeline-place">IFNTI</p>
-              <p class="timeline-date">2023 – 2025</p>
+              <p class="timeline-place"><i class="fas fa-university"></i> IFNTI</p>
               <p>Acquisition des fondements en algorithmique, programmation, réseaux et technologies web.</p>
             </div>
           </div>
@@ -317,44 +371,42 @@
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <p class="section-subtitle">Une question ou une opportunité ? N'hésite pas à me contacter.</p>
-        <div class="contact-box">
-          <div class="contact-info">
-            <div class="contact-item">
-              <span class="contact-label">Email</span>
-              <a href="assikpaizandine@gmail.com">assikpaizandine@gmail.com</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Localisation</span>
-              <span>Togo</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">École</span>
-              <span>IFNTI</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">GitHub</span>
-              <a href="https://github.com/ASSIKPAIzandine-dev" target="_blank" rel="noopener">
-                Voir le profil GitHub
-              </a>
-            </div>
-            <div class="contact-item">
-          <span class="contact-label">
-          <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i>WhatsApp
-        </span>
-      <a href="https://wa.me " target="_blank" rel="noopener">Discuter sur WhatsApp</a>
-</div>
-
+        <div class="contact-grid">
+          <a href="mailto:assikpaizandine@gmail.com" class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <h3>Email</h3>
+            <p>assikpaizandine@gmail.com</p>
+          </a>
+          <a href="https://github.com/ASSIKPAIzandine-dev" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <h3>GitHub</h3>
+            <p>ASSIKPAIzandine-dev</p>
+          </a>
+          <a href="https://wa.me/22800000000" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+            <h3>WhatsApp</h3>
+            <p>Discuter maintenant</p>
+          </a>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Localisation</h3>
+            <p>Togo</p>
           </div>
-  
+        </div>
+        <div class="contact-cta">
+          <a href="images/izandine.pdf" class="btn btn-primary" download="CV_ASSIKPA_Izandine.pdf">
+            <i class="fas fa-download"></i> Télécharger mon CV
+          </a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>© 2026 ASSIKPA Izandine. Tous droits réservés.</p>
-      <p class="footer-sub">Portfolio réalisé avec ❤️</p>
+      <p class="footer-sub">Portfolio réalisé avec <i class="fas fa-heart"></i></p>
     </div>
   </footer>
 
